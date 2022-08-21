@@ -1,0 +1,3 @@
+files:
+  - source: /zh-Hans/**/*
+    translation: /%locale%/**/%original_file_name%
