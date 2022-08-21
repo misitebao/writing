@@ -1,6 +1,5 @@
 project_id: 533404
 api_token_env: CROWDIN_PERSONAL_TOKEN
-
 files:
   - source: /zh-Hans/**/*
     translation: /%locale%/**/%original_file_name%
