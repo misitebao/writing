@@ -1,9 +1,7 @@
 - - -
-
 title: "More elegant use of go and web technologies to develop cross-platform desktop applications" #文章标题 date= 2021-10-01 #文章创建时间 lastmod: 2021-10-01 #文章最后修改时间 draft: false #是否为草稿 slug : "go-and-web-technology-to-develop-cross-platform-desktop-applications" url : "posts/go-and-web-technology-to-develop-cross-platform-desktop-applications" description: "更优雅的使用 go 和 web 技术开发跨平台桌面应用" #文章内容描述 summary: "更优雅的使用 go 和 web 技术开发跨平台桌面应用" # 文章摘要
 
 tags: ["go","wails","桌面应用","webview","webview2"] #文章标签 categories: ["编程技术","Go","Wails"] #文章分类
-
 - - -
 
 # More elegant use of go and web technologies to develop cross-platform desktop applications
