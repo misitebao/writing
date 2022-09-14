@@ -27,6 +27,16 @@
 
 This project is used to store my writing work. Currently presented as a website: [Misitebao's blog](https://blog.misitebao.com)
 
+### Post List
+
+<details open>
+  <summary>Click me to Open/Close the directory listing</summary>
+
+- [About](../en/about.md)
+- [Links](../en/links.md)
+
+</details>
+
 ## License
 
 The source code is licensed under the [License MIT](../LICENSE).
