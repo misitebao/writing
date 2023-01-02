@@ -1,0 +1,23 @@
+# https://taskfile.dev
+
+version: "3"
+
+tasks:
+  install:
+    cmds:
+      - npm i -g @crowdin/cli@latest
+    silent: true
+
+  push:
+    deps:
+      - install
+    cmds:
+      - crowdin push
+    silent: true
+
+  pull:
+    deps:
+      - install
+    cmds:
+      - crowdin pull --export-only-approved
+    silent: true
