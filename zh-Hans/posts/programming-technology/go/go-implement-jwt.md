@@ -1,13 +1,13 @@
-+++
-title= "Go语言实现jwt" #文章标题
-date= 2019-10-11 #文章创建时间
-lastmod= 2019-10-14 #文章最后修改时间
-draft= true #是否为草稿
-description= "" #文章内容描述
-
-tags= [] #文章标签
-categories= ["编程技术","Go"] #文章分类
-
-+++
+---
+title: Go语言实现jwt
+date: 2019-10-11
+lastmod: 2019-10-14
+draft: true
+description: ""
+tags: []
+categories:
+  - 编程技术
+  - Go
+---
 
 # Go 语言实现 jwt

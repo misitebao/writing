@@ -1,32 +1,41 @@
-+++
-title= "Electron 调用 DLL 文件"
-draft= false
-date= 2018-10-22
-lastmod= 2019-05-09
-license= "MIT"
-
-tags= ["electron"]
-categories= ["编程技术","大前端","Electron"]
-
-+++
+---
+title: Electron 调用 DLL 文件
+draft: false
+date: 2018-10-22
+lastmod: 2019-05-09
+license: MIT
+tags:
+  - electron
+categories:
+  - 编程技术
+  - 大前端
+  - Electron
+---
 
 # Electron 调用 DLL 文件
 
 > 本文由米司在开发 electron 应用，找资料时发现。
 >
-> 转载自 [Ke Haw 🇨🇳] (<[http://www.kehaw.com/electron/node.js/2019/11/11/Electron-%E4%B8%8B%E8%B0%83%E7%94%A8DLL%E6%96%87%E4%BB%B6.html](http://www.kehaw.com/electron/node.js/2019/11/11/Electron-下调用DLL文件.html)>)
+> 转载自 [Ke Haw 🇨🇳]
+> (<[http://www.kehaw.com/electron/node.js/2019/11/11/Electron-%E4%B8%8B%E8%B0%83%E7%94%A8DLL%E6%96%87%E4%BB%B6.html](http://www.kehaw.com/electron/node.js/2019/11/11/Electron-下调用DLL文件.html)>)
 >
 > 已获得作者授权
 
-Node.JS 调用 DLL 文件分两种方式，其一是通过 Node Addon 将 C++ 程序编译成 Addon 加载到 Chromium 引擎中，然后通过 JS 去调用，这是比较正规的做法，但是这种做法需要开发人员有一定的 C++ 编程技能，故而可能比较难以实现。
+Node.JS 调用 DLL 文件分两种方式，其一是通过 Node Addon 将 C++ 程序编译成 Addon
+加载到 Chromium 引擎中，然后通过 JS 去调用，这是比较正规的做法，但是这种做法需要
+开发人员有一定的 C++ 编程技能，故而可能比较难以实现。
 
-还有一种做法是基于 node.js 的 ffi-napi 开源项目去加载 dll 文件。该 dll 文件必须由 c++ 编写，而基于 c# 编写的 dll 文件，请参考另外一个开源项目：`edge`，本文主要讲述如何使用 `ffi-napi` 来调用 C++ 编写的 dll 动态链接库。
+还有一种做法是基于 node.js 的 ffi-napi 开源项目去加载 dll 文件。该 dll 文件必须
+由 c++ 编写，而基于 c# 编写的 dll 文件，请参考另外一个开源项目：`edge`，本文主要
+讲述如何使用 `ffi-napi` 来调用 C++ 编写的 dll 动态链接库。
 
 > 请勿使用 node-ffi 而是使用 ffi-napi
 
 ## 首先编写一个 DLL
 
-为了讲述如何基于 `ffi-napi` 调用 dll 文件，我们首先编写一个 dll 文件，在 VS 2019 中创建一个基于 C++ 的 dll 库项目，项目名为 `demo-dll`，然后在 `pch.h` 文件中加入函数定义如下：
+为了讲述如何基于 `ffi-napi` 调用 dll 文件，我们首先编写一个 dll 文件，在 VS 2019
+中创建一个基于 C++ 的 dll 库项目，项目名为 `demo-dll`，然后在 `pch.h` 文件中加入
+函数定义如下：
 
 ```c++
 // pch.h: 这是预编译标头文件。
@@ -87,7 +96,8 @@ double divide(int a, int b)
 
 我们可以看到，就是最简单的加减乘除四个函数，然后执行编译生成 DLL。
 
-然后，重新建立一个控制台项目，来验证 dll 文件是否能够正常使用，在这里就不写具体的例子了。
+然后，重新建立一个控制台项目，来验证 dll 文件是否能够正常使用，在这里就不写具体
+的例子了。
 
 ## 自行创建一个最简单的 Electron 项目调用 dll
 
@@ -199,7 +209,8 @@ console.log(result);//这里会打印出正确的的计算结果
 
 ## 第三方 DLL 调用注意事项
 
-首先要注意对方的 dll 是基于 `c#` 还是 `c++` 编写的，因为两种动态链接库的是不一样的调用方式。
+首先要注意对方的 dll 是基于 `c#` 还是 `c++` 编写的，因为两种动态链接库的是不一样
+的调用方式。
 
 其次要注意对方的 dll 库是 x86 还是 x64 的，不一样的软件架构会导致程序崩溃。
 
@@ -211,7 +222,8 @@ const libm = ffi.Library(__dirname + '\\demo-dll.dll', {
 });
 ```
 
-`add`为函数名，数组中的第一个参数代表这个函数的返回类型，第二个参数代表所需要传入给这个函数的参数。
+`add`为函数名，数组中的第一个参数代表这个函数的返回类型，第二个参数代表所需要传
+入给这个函数的参数。
 
 然后直接使用`Library`对象来调用就可以了。
 

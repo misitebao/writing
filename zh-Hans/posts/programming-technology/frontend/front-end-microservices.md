@@ -1,14 +1,16 @@
-+++
-title= "前端微服务" #文章标题
-date= 2021-03-27 #文章创建时间
-lastmod= 2021-03-27 #文章最后修改时间
-draft= true #是否为草稿
-description= "" #文章内容描述
-
-tags= ["微服务","微前端"] #文章标签
-categories= ["编程技术","大前端"] #文章分类
-
-+++
+---
+title: 前端微服务
+date: 2021-03-27
+lastmod: 2021-03-27
+draft: true
+description: ""
+tags:
+  - 微服务
+  - 微前端
+categories:
+  - 编程技术
+  - 大前端
+---
 
 # 前端微服务（1）什么是微服务
 

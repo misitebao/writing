@@ -1,14 +1,13 @@
-+++
-title= "安卓andriod开发者数字证书生成教程" #文章标题
-date= 2019-03-17 #文章创建时间
-lastmod= 2019-03-17 #文章最后修改时间
-draft= false #是否为草稿
-description= "" #文章内容描述
-
-tags= [] #文章标签
-categories= ["编程技术"] #文章分类
-
-+++
+---
+title: 安卓andriod开发者数字证书生成教程
+date: 2019-03-17
+lastmod: 2019-03-17
+draft: false
+description: ""
+tags: []
+categories:
+  - 编程技术
+---
 
 # 安卓 andriod 开发者数字证书生成
 
@@ -35,7 +34,8 @@ keytool -genkey -alias aliasname -keyalg RSA -keysize 2048 -validity 36500 -keys
 ```
 
 - testalias 是证书别名，可修改为自己想设置的字符，建议使用英文字母和数字
-- test.keystore 是证书文件名称，可修改为自己想设置的文件名称，也可以指定完整文件路径
+- test.keystore 是证书文件名称，可修改为自己想设置的文件名称，也可以指定完整文件
+  路径
 
 回车后会提示：
 
@@ -98,9 +98,6 @@ Version: 3
 
 其中证书指纹信息（Certificate fingerprints）：
 
-- MD5
-  证书的 MD5 指纹信息（安全码 MD5）
-- SHA1
-  证书的 SHA1 指纹信息（安全码 SHA1）
-- SHA256
-  证书的 SHA256 指纹信息（安全码 SHA245）
+- MD5 证书的 MD5 指纹信息（安全码 MD5）
+- SHA1 证书的 SHA1 指纹信息（安全码 SHA1）
+- SHA256 证书的 SHA256 指纹信息（安全码 SHA245）

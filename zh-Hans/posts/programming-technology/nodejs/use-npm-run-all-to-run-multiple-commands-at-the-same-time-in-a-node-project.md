@@ -1,14 +1,12 @@
-+++
-title= "在Node项目中使用npm-run-all同时运行多个命令" #文章标题
-date= 2021-07-17 #文章创建时间
-lastmod= 2021-07-17 #文章最后修改时间
-draft= false #是否为草稿
-description= "" #文章内容描述
-
-tags= [] #文章标签
-categories= [] #文章分类
-
-+++
+---
+title: 在Node项目中使用npm-run-all同时运行多个命令
+date: 2021-07-17
+lastmod: 2021-07-17
+draft: false
+description: ""
+tags: []
+categories: []
+---
 
 # 使用 npm-run-all 在 Node 项目中同时运行多个命令
 

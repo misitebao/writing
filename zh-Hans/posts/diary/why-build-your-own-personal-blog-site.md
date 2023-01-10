@@ -1,14 +1,13 @@
-+++
-title= "为什么要搭建自己的个人博客网站" #文章标题
-date= 2019-09-27 #文章创建时间
-lastmod= 2019-09-27 #文章最后修改时间
-draft= false #是否为草稿
-description= "" #文章内容描述
- 
-tags= [] #文章标签
-categories= ["日记随笔"] #文章分类
-
-+++
+---
+title: 为什么要搭建自己的个人博客网站
+date: 2019-09-27
+lastmod: 2019-09-27
+draft: false
+description: ""
+tags: []
+categories:
+  - 日记随笔
+---
 
 # 为什么要搭建自己的个人博客网站
 

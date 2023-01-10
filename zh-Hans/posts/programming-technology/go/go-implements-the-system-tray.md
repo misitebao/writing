@@ -1,14 +1,17 @@
-+++
-title= "Go语言实现系统托盘Tray" #文章标题
-date= 2021-05-17 #文章创建时间
-lastmod= 2021-05-17 #文章最后修改时间
-draft= false #是否为草稿
-description= "" #文章内容描述
-
-tags= ["go","系统托盘","tray"] #文章标签
-categories= ["编程技术","Go"] #文章分类
-
-+++
+---
+title: Go语言实现系统托盘Tray
+date: 2021-05-17
+lastmod: 2021-05-17
+draft: false
+description: ""
+tags:
+  - go
+  - 系统托盘
+  - tray
+categories:
+  - 编程技术
+  - Go
+---
 
 # Go 语言实现系统托盘 Tray
 
@@ -22,9 +25,13 @@ categories= ["编程技术","Go"] #文章分类
 
 ## 背景
 
-最近在开发一个 Go GUI 应用的时候，需要在应用运行的时候在操作系统托盘显示应用图标，目前 Go 官方库并没有这种库能满足我们的要求，所以在 github 找到一个可以满足我们的要求的并且跨平台的库：[github.com/riftbit/go-systray](github.com/riftbit/go-systray)
+最近在开发一个 Go GUI 应用的时候，需要在应用运行的时候在操作系统托盘显示应用图标
+，目前 Go 官方库并没有这种库能满足我们的要求，所以在 github 找到一个可以满足我们
+的要求的并且跨平台的库
+：[github.com/riftbit/go-systray](github.com/riftbit/go-systray)
 
-这篇文章的示例代码，放在仓库：[https://github.com/misitebao/demo-go-tray](https://github.com/misitebao/demo-go-tray)
+这篇文章的示例代码，放在仓库
+：[https://github.com/misitebao/demo-go-tray](https://github.com/misitebao/demo-go-tray)
 
 <span id="nav-2"></span>
 
@@ -118,7 +125,8 @@ func getIcon(s string) []byte {
 
 项目根目录下运行：`go build -ldflags="-H windowsgui"`
 
-> 关于编译命令中的参数，请参考：[Go应用隐藏启动时的黑色窗口的方法](https://blog.misitebao.com/posts/编程技术/go/go应用隐藏启动时的黑色窗口的方法/)
+> 关于编译命令中的参数，请参考
+> ：[Go 应用隐藏启动时的黑色窗口的方法](https://blog.misitebao.com/posts/编程技术/go/go应用隐藏启动时的黑色窗口的方法/)
 
 <span id="nav-3"></span>
 

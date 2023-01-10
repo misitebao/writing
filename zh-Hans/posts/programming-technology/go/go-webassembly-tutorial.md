@@ -1,14 +1,17 @@
-+++
-title= "Go WebAssembly简明教程" #文章标题
-date= 2021-05-22 #文章创建时间
-lastmod= 2021-05-22 #文章最后修改时间
-draft= true #是否为草稿
-description= "" #文章内容描述
-
-tags= ["go","webassembly","wasm"] #文章标签
-categories= ["编程技术","Go"] #文章分类
-
-+++
+---
+title: Go WebAssembly简明教程
+date: 2021-05-22
+lastmod: 2021-05-22
+draft: true
+description: ""
+tags:
+  - go
+  - webassembly
+  - wasm
+categories:
+  - 编程技术
+  - Go
+---
 
 # Go WebAssembly 简明教程
 

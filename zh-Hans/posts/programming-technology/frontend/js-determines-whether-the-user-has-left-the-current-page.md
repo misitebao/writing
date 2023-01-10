@@ -1,24 +1,28 @@
-+++
-title= "JS判断用户是是否离开当前页面"
-subtitle= ""
-date= 2018-01-22
-lastmod= 2018-01-22
-draft= false
-description= ""
-
-tags= ["javascript"]
-categories= ["编程技术","大前端","JavaScript"]
-
-+++
+---
+title: JS判断用户是是否离开当前页面
+subtitle: ""
+date: 2018-01-22
+lastmod: 2018-01-22
+draft: false
+description: ""
+tags:
+  - javascript
+categories:
+  - 编程技术
+  - 大前端
+  - JavaScript
+---
 
 # JS 判断用户是是否离开当前页面
 
 ## 文章目录
 
-- [1. 介绍](#nav-1)
-- [2. 代码](#nav-2)
-- [3. 效果](#nav-3)
-- [4. `document.visibilityState` 监听浏览器最小化](#nav-4)
+- [JS 判断用户是是否离开当前页面](#js-判断用户是是否离开当前页面)
+  - [文章目录](#文章目录)
+  - [1. 介绍](#1-介绍)
+  - [2. 代码](#2-代码)
+  - [3. 效果](#3-效果)
+  - [4. `document.visibilityState` 监听浏览器最小化](#4-documentvisibilitystate-监听浏览器最小化)
 
 <span id="nav-1"></span>
 
@@ -72,7 +76,9 @@ categories= ["编程技术","大前端","JavaScript"]
 
 ## 4. `document.visibilityState` 监听浏览器最小化
 
-`document.hidden`表示页面是否隐藏的布尔值。页面隐藏包括 页面在后台标签页中 或者 浏览器最小化 （注意，页面被其他软件遮盖并不算隐藏，比如打开的 `vscode` 遮住了浏览器）。
+`document.hidden`表示页面是否隐藏的布尔值。页面隐藏包括 页面在后台标签页中 或者
+浏览器最小化 （注意，页面被其他软件遮盖并不算隐藏，比如打开的 `vscode` 遮住了浏
+览器）。
 
 `document.visibilityState`值：
 
@@ -81,6 +87,8 @@ categories= ["编程技术","大前端","JavaScript"]
 - prerender：页面在屏幕外执行预渲染处理 `document.hidden` 的值为 true
 - unloaded：页面正在从内存中卸载
 
-visibilitychange 事件：当文档从可见变为不可见或者从不可见变为可见时，会触发该事件
+visibilitychange 事件：当文档从可见变为不可见或者从不可见变为可见时，会触发该事
+件
 
-这样，我们可以监听 `visibilitychange` 事件，当该事件触发时，获取 `document.hidden` 的值，根据该值进行页面一些事件的处理
+这样，我们可以监听 `visibilitychange` 事件，当该事件触发时，获取
+`document.hidden` 的值，根据该值进行页面一些事件的处理

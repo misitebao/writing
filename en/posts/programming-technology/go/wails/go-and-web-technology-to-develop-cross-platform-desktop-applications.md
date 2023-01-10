@@ -1,16 +1,28 @@
-+++
-title= "More elegant use of go and web technologies to develop cross-platform desktop applications" #文章标题date= 2021-10-01 #文章创建时间
-lastmod= 2021-10-01 #文章最后修改时间
-draft= false #是否为草稿
-slug = "go-and-web-technology-to-develop-cross-platform-desktop-applications"
-url ="posts/go-and-web-technology-to-develop-cross-platform-desktop-applications"
-description= "More elegant use of go and web technologies to develop cross-platform desktop applications" #文章内容描述
-summary= "More elegant use of go and web technologies to develop cross-platform desktop applications" # 文章摘要
-
-tags= ["go","wails","desktop","webview","webvie2"] #文章标签
-categories= ["编程技术","Go","Wails"] #文章分类
-
-+++
+---
+title: >-
+  More elegant use of go and web technologies to develop cross-platform desktop
+  applications
+lastmod: 2021-10-01
+draft: false
+slug: go-and-web-technology-to-develop-cross-platform-desktop-applications
+url: posts/go-and-web-technology-to-develop-cross-platform-desktop-applications
+description: >-
+  More elegant use of go and web technologies to develop cross-platform desktop
+  applications
+summary: >-
+  More elegant use of go and web technologies to develop cross-platform desktop
+  applications
+tags:
+  - go
+  - wails
+  - desktop
+  - webview
+  - webvie2
+categories:
+  - 编程技术
+  - Go
+  - Wails
+---
 
 # More elegant use of go and web technologies to develop cross-platform desktop applications
 
@@ -29,7 +41,8 @@ categories= ["编程技术","Go","Wails"] #文章分类
 
 </details>
 
-> My name is 「[Misitebao](http://misitebao.com)」, and this article was first published on 「[Misitebao's Blog](http://blog.misitebao.com)」.
+> My name is 「[Misitebao](http://misitebao.com)」, and this article was first
+> published on 「[Misitebao's Blog](http://blog.misitebao.com)」.
 
 <span id="nav-1"></span>
 

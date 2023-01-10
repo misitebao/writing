@@ -1,14 +1,15 @@
-+++
-title= "NPM包维护者必备技能" #文章标题
-date= 2021-07-14 #文章创建时间
-lastmod= 2021-07-14 #文章最后修改时间
-draft= true #是否为草稿
-description= "" #文章内容描述
-
-tags= [] #文章标签
-categories= ["编程技术","大前端","NodeJS"] #文章分类
-
-+++
+---
+title: NPM包维护者必备技能
+date: 2021-07-14
+lastmod: 2021-07-14
+draft: true
+description: ""
+tags: []
+categories:
+  - 编程技术
+  - 大前端
+  - NodeJS
+---
 
 # NPM 包维护者必备技能
 
@@ -27,7 +28,8 @@ categories= ["编程技术","大前端","NodeJS"] #文章分类
 
 </details>
 
-> 我是 「[米司特包](http://misitebao.com)」 ，本篇文章首发于 「[米司博客](http://blog.misitebao.com)」 。
+> 我是 「[米司特包](http://misitebao.com)」 ，本篇文章首发于
+> 「[米司博客](http://blog.misitebao.com)」 。
 
 <span id="nav-1"></span>
 

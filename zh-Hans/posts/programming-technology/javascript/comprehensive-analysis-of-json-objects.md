@@ -1,30 +1,38 @@
-+++
-title= "JSON对象全面解析" #文章标题
-date= 2016-09-18 #文章创建时间
-lastmod= 2016-09-24 #文章最后修改时间
-draft= false #是否为草稿
-description= "" #文章内容描述
-
-tags= ["json","javascript"] #文章标签
-categories= ["编程技术","大前端","JavaScript"] #文章分类
-
-+++
+---
+title: JSON对象全面解析
+date: 2016-09-18
+lastmod: 2016-09-24
+draft: false
+description: ""
+tags:
+  - json
+  - javascript
+categories:
+  - 编程技术
+  - 大前端
+  - JavaScript
+---
 
 # JSON 对象全面解析
 
 ## JSON 格式
 
-JSON 格式（JavaScript Object Notation 的缩写）是一种用于数据交换的文本格式，2001 年由 Douglas Crockford 提出，目的是取代繁琐笨重的 XML 格式。
+JSON 格式（JavaScript Object Notation 的缩写）是一种用于数据交换的文本格式，2001
+年由 Douglas Crockford 提出，目的是取代繁琐笨重的 XML 格式。
 
-相比 XML 格式，JSON 格式有两个显著的优点：书写简单，一目了然；符合 JavaScript 原生语法，可以由解释引擎直接处理，不用另外添加解析代码。所以，JSON 迅速被接受，已经成为各大网站交换数据的标准格式，并被写入标准。
+相比 XML 格式，JSON 格式有两个显著的优点：书写简单，一目了然；符合 JavaScript 原
+生语法，可以由解释引擎直接处理，不用另外添加解析代码。所以，JSON 迅速被接受，已
+经成为各大网站交换数据的标准格式，并被写入标准。
 
-每个 JSON 对象就是一个值，可能是一个数组或对象，也可能是一个原始类型的值。总之，只能是一个值，不能是两个或更多的值。
+每个 JSON 对象就是一个值，可能是一个数组或对象，也可能是一个原始类型的值。总之，
+只能是一个值，不能是两个或更多的值。
 
 JSON 对值的类型和格式有严格的规定。
 
 > 1. 复合类型的值只能是数组或对象，不能是函数、正则表达式对象、日期对象。
 >
-> 1. 原始类型的值只有四种：字符串、数值（必须以十进制表示）、布尔值和`null`（不能使用`NaN`, `Infinity`, `-Infinity`和`undefined`）。
+> 1. 原始类型的值只有四种：字符串、数值（必须以十进制表示）、布尔值和`null`（不
+>    能使用`NaN`, `Infinity`, `-Infinity`和`undefined`）。
 >
 > 1. 字符串必须使用双引号表示，不能使用单引号。
 >
@@ -65,13 +73,15 @@ JSON 对值的类型和格式有严格的规定。
 
 ## JSON 对象
 
-`JSON`对象是 JavaScript 的原生对象，用来处理 JSON 格式数据。它有两个静态方法：`JSON.stringify()`和`JSON.parse()`。
+`JSON`对象是 JavaScript 的原生对象，用来处理 JSON 格式数据。它有两个静态方法
+：`JSON.stringify()`和`JSON.parse()`。
 
 ## JSON.stringify()
 
 ### 基本用法
 
-`JSON.stringify`方法用于将一个值转为 JSON 字符串。该字符串符合 JSON 格式，并且可以被`JSON.parse`方法还原。
+`JSON.stringify`方法用于将一个值转为 JSON 字符串。该字符串符合 JSON 格式，并且可
+以被`JSON.parse`方法还原。
 
 ```javascript
 JSON.stringify("abc"); // ""abc""
@@ -96,14 +106,16 @@ JSON.stringify("foo") === "foo"; // false
 JSON.stringify("foo") === '"foo"'; // true
 ```
 
-上面代码中，字符串`foo`，被转成了`"\"foo"\"`。这是因为将来还原的时候，内层双引号可以让 JavaScript 引擎知道，这是一个字符串，而不是其他类型的值。
+上面代码中，字符串`foo`，被转成了`"\"foo"\"`。这是因为将来还原的时候，内层双引号
+可以让 JavaScript 引擎知道，这是一个字符串，而不是其他类型的值。
 
 ```javascript
 JSON.stringify(false); // "false"
 JSON.stringify("false"); // "\"false\""
 ```
 
-上面代码中，如果不是内层的双引号，将来还原的时候，引擎就无法知道原始值是布尔值还是字符串。
+上面代码中，如果不是内层的双引号，将来还原的时候，引擎就无法知道原始值是布尔值还
+是字符串。
 
 如果对象的属性是`undefined`、函数或 XML 对象，该属性会被`JSON.stringify`过滤。
 
@@ -116,7 +128,8 @@ var obj = {
 JSON.stringify(obj); // "{}"
 ```
 
-上面代码中，对象`obj`的`a`属性是`undefined`，而`b`属性是一个函数，结果都被`JSON.stringify`过滤。
+上面代码中，对象`obj`的`a`属性是`undefined`，而`b`属性是一个函数，结果都
+被`JSON.stringify`过滤。
 
 如果数组的成员是`undefined`、函数或 XML 对象，则这些值被转成`null`。
 
@@ -155,7 +168,8 @@ JSON.stringify(obj); // "{"foo":1}"
 
 ### 第二个参数
 
-`JSON.stringify`方法还可以接受一个数组，作为第二个参数，指定需要转成字符串的属性。
+`JSON.stringify`方法还可以接受一个数组，作为第二个参数，指定需要转成字符串的属性
+。
 
 ```javascript
 var obj = {
@@ -182,7 +196,8 @@ JSON.stringify({ 0: "a", 1: "b" }, ["0"]);
 // "{"0":"a"}"
 ```
 
-上面代码中，第二个参数指定 JSON 格式只转`0`号属性，实际上对数组是无效的，只对对象有效。
+上面代码中，第二个参数指定 JSON 格式只转`0`号属性，实际上对数组是无效的，只对对
+象有效。
 
 第二个参数还可以是一个函数，用来更改`JSON.stringify`的返回值。
 
@@ -198,7 +213,8 @@ JSON.stringify({ a: 1, b: 2 }, f);
 // '{"a": 2,"b": 4}'
 ```
 
-上面代码中的`f`函数，接受两个参数，分别是被转换的对象的键名和键值。如果键值是数值，就将它乘以`2`，否则就原样返回。
+上面代码中的`f`函数，接受两个参数，分别是被转换的对象的键名和键值。如果键值是数
+值，就将它乘以`2`，否则就原样返回。
 
 注意，这个处理函数是递归处理所有的键。
 
@@ -217,7 +233,9 @@ JSON.stringify(o, f);
 // '{"a":{"b":1}}'
 ```
 
-上面代码中，对象`o`一共会被`f`函数处理三次，最后那行是`JSON.stringify`的输出。第一次键名为空，键值是整个对象`o`；第二次键名为`a`，键值是`{b: 1}`；第三次键名为`b`，键值为 1。
+上面代码中，对象`o`一共会被`f`函数处理三次，最后那行是`JSON.stringify`的输出。第
+一次键名为空，键值是整个对象`o`；第二次键名为`a`，键值是`{b: 1}`；第三次键名
+为`b`，键值为 1。
 
 递归处理中，每一次处理的对象，都是前一次返回的值。
 
@@ -235,7 +253,8 @@ JSON.stringify(o, f);
 // "{"b": 4}"
 ```
 
-上面代码中，`f`函数修改了对象`o`，接着`JSON.stringify`方法就递归处理修改后的对象`o`。
+上面代码中，`f`函数修改了对象`o`，接着`JSON.stringify`方法就递归处理修改后的对
+象`o`。
 
 如果处理函数返回`undefined`或没有返回值，则该属性会被忽略。
 
@@ -255,7 +274,9 @@ JSON.stringify({ a: "abc", b: 123 }, f);
 
 ### 第三个参数
 
-`JSON.stringify`还可以接受第三个参数，用于增加返回的 JSON 字符串的可读性。如果是数字，表示每个属性前面添加的空格（最多不超过 10 个）；如果是字符串（不超过 10 个字符），则该字符串会添加在每行前面。
+`JSON.stringify`还可以接受第三个参数，用于增加返回的 JSON 字符串的可读性。如果是
+数字，表示每个属性前面添加的空格（最多不超过 10 个）；如果是字符串（不超过 10 个
+字符），则该字符串会添加在每行前面。
 
 ```javascript
 JSON.stringify({ p1: 1, p2: 2 }, null, 2);
@@ -277,7 +298,8 @@ JSON.stringify({ p1: 1, p2: 2 }, null, "|-");
 
 ### 参数对象的 toJSON 方法
 
-如果参数对象有自定义的`toJSON`方法，那么`JSON.stringify`会使用这个方法的返回值作为参数，而忽略原对象的其他属性。
+如果参数对象有自定义的`toJSON`方法，那么`JSON.stringify`会使用这个方法的返回值作
+为参数，而忽略原对象的其他属性。
 
 下面是一个普通的对象。
 
@@ -317,7 +339,8 @@ JSON.stringify(user);
 // "{"name":"张三"}"
 ```
 
-上面代码中，`JSON.stringify`发现参数对象有`toJSON`方法，就直接使用这个方法的返回值作为参数，而忽略原对象的其他参数。
+上面代码中，`JSON.stringify`发现参数对象有`toJSON`方法，就直接使用这个方法的返回
+值作为参数，而忽略原对象的其他参数。
 
 `Date`对象就有一个自己的`toJSON`方法。
 
@@ -327,9 +350,11 @@ date.toJSON(); // "2015-01-01T00:00:00.000Z"
 JSON.stringify(date); // ""2015-01-01T00:00:00.000Z""
 ```
 
-上面代码中，`JSON.stringify`发现处理的是`Date`对象实例，就会调用这个实例对象的`toJSON`方法，将该方法的返回值作为参数。
+上面代码中，`JSON.stringify`发现处理的是`Date`对象实例，就会调用这个实例对象
+的`toJSON`方法，将该方法的返回值作为参数。
 
-`toJSON`方法的一个应用是，将正则对象自动转为字符串。因为`JSON.stringify`默认不能转换正则对象，但是设置了`toJSON`方法以后，就可以转换正则对象了。
+`toJSON`方法的一个应用是，将正则对象自动转为字符串。因为`JSON.stringify`默认不能
+转换正则对象，但是设置了`toJSON`方法以后，就可以转换正则对象了。
 
 ```javascript
 var obj = {
@@ -344,7 +369,9 @@ RegExp.prototype.toJSON = RegExp.prototype.toString;
 JSON.stringify(/foo/); // ""/foo/""
 ```
 
-上面代码在正则对象的原型上面部署了`toJSON`方法，将其指向`toString`方法，因此遇到转换成`JSON`时，正则对象就先调用`toJSON`方法转为字符串，然后再被`JSON.stingify`方法处理。
+上面代码在正则对象的原型上面部署了`toJSON`方法，将其指向`toString`方法，因此遇到
+转换成`JSON`时，正则对象就先调用`toJSON`方法转为字符串，然后再
+被`JSON.stingify`方法处理。
 
 ## JSON.parse()
 
@@ -368,7 +395,8 @@ JSON.parse("'String'"); // illegal single quotes
 // SyntaxError: Unexpected token ILLEGAL
 ```
 
-上面代码中，双引号字符串中是一个单引号字符串，因为单引号字符串不符合 JSON 格式，所以报错。
+上面代码中，双引号字符串中是一个单引号字符串，因为单引号字符串不符合 JSON 格式，
+所以报错。
 
 为了处理解析错误，可以将`JSON.parse`方法放在`try...catch`代码块中。
 
@@ -380,7 +408,8 @@ try {
 }
 ```
 
-`JSON.parse`方法可以接受一个处理函数，作为第二个参数，用法与`JSON.stringify`方法类似。
+`JSON.parse`方法可以接受一个处理函数，作为第二个参数，用法与`JSON.stringify`方法
+类似。
 
 ```javascript
 function f(key, value) {
@@ -394,12 +423,18 @@ JSON.parse('{"a": 1, "b": 2}', f);
 // {a: 11, b: 2}
 ```
 
-上面代码中，`JSON.parse`的第二个参数是一个函数，如果键名是`a`，该函数会将键值加上 10。
+上面代码中，`JSON.parse`的第二个参数是一个函数，如果键名是`a`，该函数会将键值加
+上 10。
 
 ## 参考链接
 
-- MDN, [Using native JSON](https://developer.mozilla.org/en-US/docs/Using_native_JSON)
-- MDN, [JSON.parse](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/JSON/parse)
-- Dr. Axel Rauschmayer, [JavaScript’s JSON API](http://www.2ality.com/2011/08/json-api.html)
-- Jim Cowart, [What You Might Not Know About JSON.stringify()](http://freshbrewedcode.com/jimcowart/2013/01/29/what-you-might-not-know-about-json-stringify/)
-- Marco Rogers polotek, [What is JSON?](http://docs.nodejitsu.com/articles/javascript-conventions/what-is-json)
+- MDN,
+  [Using native JSON](https://developer.mozilla.org/en-US/docs/Using_native_JSON)
+- MDN,
+  [JSON.parse](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/JSON/parse)
+- Dr. Axel Rauschmayer,
+  [JavaScript’s JSON API](http://www.2ality.com/2011/08/json-api.html)
+- Jim Cowart,
+  [What You Might Not Know About JSON.stringify()](http://freshbrewedcode.com/jimcowart/2013/01/29/what-you-might-not-know-about-json-stringify/)
+- Marco Rogers polotek,
+  [What is JSON?](http://docs.nodejitsu.com/articles/javascript-conventions/what-is-json)

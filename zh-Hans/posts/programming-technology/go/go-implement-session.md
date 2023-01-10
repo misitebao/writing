@@ -1,14 +1,15 @@
-+++
-title= "Go使用session" #文章标题
-date= 2019-05-24 #文章创建时间
-lastmod= 2019-05-24 #文章最后修改时间
-draft= true #是否为草稿
-description= "" #文章内容描述
-
-tags= ["session"] #文章标签
-categories= ["编程技术","Go"] #文章分类
-
-+++
+---
+title: Go使用session
+date: 2019-05-24
+lastmod: 2019-05-24
+draft: true
+description: ""
+tags:
+  - session
+categories:
+  - 编程技术
+  - Go
+---
 
 # Go 使用 session
 
