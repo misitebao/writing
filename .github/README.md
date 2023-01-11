@@ -25,7 +25,8 @@
 
 ## Introductions
 
-This project is used to store my writing work. Currently presented as a website: [Misitebao's blog](https://blog.misitebao.com)
+This project is used to store my writing work. Currently presented as a website:
+[Misitebao's blog](https://blog.misitebao.com)
 
 ### Post List
 
@@ -41,4 +42,5 @@ This project is used to store my writing work. Currently presented as a website:
 
 The source code is licensed under the [License MIT](../LICENSE).
 
-Written content is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+Written content is licensed under the
+[Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
