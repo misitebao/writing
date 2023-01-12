@@ -8,14 +8,14 @@ tasks:
       - npm i -g @crowdin/cli@latest
     silent: true
 
-  push:
+  crowdin:push:
     deps:
       - install
     cmds:
       - crowdin push
     silent: true
 
-  pull:
+  crowdin:pull:
     deps:
       - install
     cmds:
